@@ -1,0 +1,22 @@
+int cambien = A0; 
+double giatri,ketqua;
+void setup() {
+  
+Serial.begin(9600);
+ pinMode(cambien, INPUT); 
+
+}
+
+void loop() {
+  
+giatri = analogRead(cambien);
+
+ketqua = 100-((giatri*100)/1023);
+
+  Serial.print("Gia tri cam bien: ");
+  Serial.println(giatri);
+  Serial.print("Phan tram do am: ");
+  Serial.println(ketqua);
+
+delay(1000);
+}
